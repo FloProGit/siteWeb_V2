@@ -25,7 +25,7 @@ class Router
         $this->routes['post'][$path] = $callback;
     }
 
-    public function resolve(): callable
+    public function resolve():mixed
     {
         $path = $this->request->getPath();
         $method = $this->request->getMethode();
