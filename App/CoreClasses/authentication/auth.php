@@ -4,7 +4,7 @@ namespace App\CoreClasses\authentication;
 
 class auth{
 
-    public static function CallValidateUser($bdd,$username,$password):string|bool
+    public static function CallValidateUser(\PDO $bdd, string $username, string $password):string|bool
     {
         if(isset($bdd))
         {
@@ -28,7 +28,7 @@ class auth{
         }
     }
 
-    private static function compare($a ,$b) : bool 
+    private static function compare(string $a ,string $b) : bool 
     {
         if($a === $b)
         return true;

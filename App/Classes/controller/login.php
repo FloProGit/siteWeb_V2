@@ -9,12 +9,13 @@ class Login
     private const LOGIN_VIEW_NAME = 'login_view';
     private $ModeLogin;
 
-    public function loginIn()
+    public function loginIn() : void 
     {
         if($_SERVER['REQUEST_METHOD'] === self::METHOD_GET)
         {
             $myView = new View(self::LOGIN_VIEW_NAME);
-            return $myView->render(['data'=>'','style'=>'login']);
+             $myView->render(['data'=>'','style'=>'login']);
+            return ;
         }
         $username= $_POST['username'];
         $password= $_POST['password'];
@@ -24,7 +25,8 @@ class Login
         if($datafetch === 'NO USER FOUND')
         {
             $myView = new View(self::LOGIN_VIEW_NAME);
-            return $myView->render(['data'=>'mail ou mot de passe incorect !']);
+            $myView->render(['data'=>'mail ou mot de passe incorect !']);
+            return;
         }
         else if($datafetch === true)
         {
@@ -40,7 +42,8 @@ class Login
         {
             echo 'NO USER FOUND';
             $myView = new View(self::LOGIN_VIEW_NAME);
-            return $myView->render(['data'=>'mail ou mot de passe incorect !']);
+             $myView->render(['data'=>'mail ou mot de passe incorect !']);
+            return;
         }
       
         // header('Location: '.$redirection);

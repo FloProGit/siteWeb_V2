@@ -6,7 +6,7 @@ class BDDCreationManager
 {
     private $arrayAction =[];
 
-    public function __construct($yamlPath,$conn)
+    public function __construct(string $yamlPath,\PDO $conn)
     {
 
     
@@ -38,7 +38,7 @@ class BDDCreationManager
             }
         }
     }
-    public function CreateObjectsAction($keyAction,$Action) : ActionBDD
+    public function CreateObjectsAction(string $keyAction, Array $Action) : ActionBDD
     {
           return new ActionBDD($keyAction,$Action);
     }

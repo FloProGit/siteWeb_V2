@@ -23,4 +23,6 @@ class Application
     {
         $this->router->resolve();
     }
+
+
 }

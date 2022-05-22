@@ -4,30 +4,30 @@ use App\CoreClasses\View;
 
 class Home
 {
-    public function showHome()
+    public function showHome():void
     {
         $myView = new View('home');
         $myView->render(['style'=>'home']);
     }
 
-    public function showCompetence()
+    public function showCompetence():void
     {
         $myView = new View('competence');
         $myView->render(['style'=>'competence']);
     }
 
-    public function showA_Propos()
+    public function showA_Propos():void
     {
         $myView = new View('a_propos');
         $myView->render(['style'=>'a_propos']);
     }
-    public function showCheck()
+    public function showCheck():void
     {
         //echo "tata";
         $myView = new View('CheckVar');
         $myView->render(['style'=>'CheckVar']);
     }
-    public function showCreateBDD()
+    public function showCreateBDD():void
     {
         //echo "tata";
         $myView = new View('CreateBDDPage');

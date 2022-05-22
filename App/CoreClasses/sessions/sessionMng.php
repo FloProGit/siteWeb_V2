@@ -28,7 +28,7 @@ class SessionMng{
       }
 
  }
- static function GETSessionData($ID)
+ static function GETSessionData(string $ID)
  {
    if(empty($_SESSION[$ID]))
      return '';

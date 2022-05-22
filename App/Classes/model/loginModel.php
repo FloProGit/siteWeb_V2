@@ -7,9 +7,9 @@ class loginModel extends BaseManager
    private $_username;
    private $_password;
     
-    public function __construct($username,$password)
+    public function __construct(string $username, string $password)
     {
-        parent::__construct("user","User");
+        parent::__construct("user");
         $this->_username = $username;
         $this->_password = $password;
         
@@ -22,11 +22,11 @@ class loginModel extends BaseManager
 
   
 
-    public function getUserName()
+    public function getUserName() : string
     {
         return $this->_username;
     }
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->_password;
     }

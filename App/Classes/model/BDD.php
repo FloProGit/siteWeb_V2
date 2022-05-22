@@ -37,7 +37,7 @@ class BDD
         }        
     }
 
-    public function getBdd()
+    public function getBdd() :\PDO
     {
         return $this->_bdd;
     }

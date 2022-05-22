@@ -20,15 +20,10 @@ class Request
         }
     }
 
-    public function getMethode()
+    public function getMethode():string 
     {
          return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
 
-    public function getBody()
-    {
-
-        
-    }
 }

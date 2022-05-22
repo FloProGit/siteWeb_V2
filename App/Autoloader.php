@@ -32,7 +32,6 @@ class MyAutoload
             {
                 include_once($class);
                 // echo 'NONE AUTOLOAD => '.$class.'.php';
-    
             }
             else
             {

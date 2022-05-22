@@ -1,15 +1,13 @@
 <?php
 
 
-
 class ActionBDD
 {
     
     private $finalString;
 
-    public function __construct($keyAction,$Array)
+    public function __construct(string $keyAction,Array $Array)
     {
-
         $this->finalString = $this->DetectAction($keyAction,$Array);
     }
 
@@ -18,7 +16,7 @@ class ActionBDD
         return $this->finalString;
     }
 
-    private function DetectAction($keyAction,$action) : string
+    private function DetectAction(string $keyAction, Array $action) : string
     {
         $string = '';
         if($keyAction === 'CreateBDD')
@@ -52,7 +50,7 @@ class ActionBDD
         return $string;
     }
 
-    private function createlinefromdataArray($array):string
+    private function createlinefromdataArray(Array $array):string
     {
         $useValue = false;
         $string = ''; 

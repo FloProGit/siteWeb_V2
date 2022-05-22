@@ -6,7 +6,7 @@ class BDDCreate{
     private $username; 
     private $password ;
 
-    public function __construct($servername,$username,$password)
+    public function __construct(string $servername, string $username, string $password)
     {
         
         $this->servername = $servername;
