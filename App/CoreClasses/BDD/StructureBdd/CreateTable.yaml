@@ -1,0 +1,52 @@
+---
+# CreateBDD:
+#   name : flotestbdd
+
+# column1:
+#       name: ID
+#       type: INT
+#       value: 0
+#       default: none
+#       collation: none
+#       attributes: none
+#       _null :  NOT NULL or NULL
+#       index : PRIMARY
+#       A_I : false
+#       comments : ''
+#       virtuality: none
+#       move_column : none
+#       media_type : none
+#       browser_display_transformation : none
+#       browser_display_transformation_options : none
+#       Input_transformation: none
+#       input_transformation_options: none 
+
+
+
+CreateTable:
+  name: users
+  DBTarget: '%env(DATABASE_NAME)%'
+  column:
+    column1:
+      name: ID
+      type: INT
+      _null : false
+      A_I : true
+      index : PRIMARY KEY
+    column2:
+      name: mail
+      _null : false
+      type: VARCHAR
+      value: 100
+    column3:
+      name: password
+      type: VARCHAR
+      _null : false
+      value: 255
+    column4:
+      name: created_at
+      type: DATETIME 
+      default: CURRENT_TIMESTAMP
+      _null : false
+
+  
