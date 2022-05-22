@@ -1,6 +1,6 @@
 <?php
    use App\CoreClasses\sessions\SessionMng;
-     SessionMng::init_php_session();
+    SessionMng::init_php_session();
 ?>
 <div class="Page_inner">
         <section id="section_home">

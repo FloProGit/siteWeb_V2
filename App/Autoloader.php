@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Directory;
+
 class MyAutoload
 {
     public static function start()
@@ -18,17 +20,20 @@ class MyAutoload
         define('CSS',HOST.'public/css/');
         define('IMG',ROOT.'public/img/');
         define('CLASSES',ROOT.'classes/');
+        define('APP',__DIR__.'/');
+
     }
     public static function autoload($class)
     {
-
+       
+   
         if(strpos($class,__NAMESPACE__. '\\') === 0)
         {
             $class =str_replace(__NAMESPACE__.'\\','',$class);
 
-            $class =str_replace('\\','/',$class) . '.php';
-
-            if(file_exists('../App/'.$class))
+            $class = str_replace('\\',DIRECTORY_SEPARATOR,$class) . '.php';
+            
+            if(file_exists(APP.$class))
             {
                 include_once($class);
                 // echo 'NONE AUTOLOAD => '.$class.'.php';

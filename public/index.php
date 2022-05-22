@@ -18,7 +18,9 @@ $app->router->get('/a_propos',[Home::class,'showA_Propos']);
 $app->router->get('/competence',[Home::class,'showCompetence']);
 $app->router->get('/login',[Login::class,'loginIn']);
 $app->router->post('/login',[Login::class,'loginIn']);
+
 $app->run();
+
 
 
 
