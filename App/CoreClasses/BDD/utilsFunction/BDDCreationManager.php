@@ -21,10 +21,8 @@ class BDDCreationManager
 
             $sql = $string->getFinalString();
             $quit = false;
-            echo 'SQL =>' .$sql;
             while(!$quit)
             {
-            var_dump($sql);
 
                     if( $conn->query($sql) === TRUE)
                     {
@@ -45,6 +43,5 @@ class BDDCreationManager
 
     public function showArrayAction() 
     {
-         var_dump($this->arrayAction);
     }
 }

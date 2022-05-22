@@ -7,7 +7,6 @@
 $dns = $_ENV['DATABASE_DNS'];
 $host = getenv('DATABASE_USER');
 $pass = getenv('DATABASE_PASSWORD');
-//var_dump($_ENV);
 
 
     $conn = new PDO($dns,$host,$pass);
@@ -33,12 +32,7 @@ foreach($databases as $database){
                 <input type="submit" value="Open Form">
                 </form>';
            
-//phpinfo();
-// foreach($_SERVER as $key_name => $key_value) {
 
-// print $key_name . " = " . $key_value . "<br>";
-
-// }
 
 ?>
 </p>

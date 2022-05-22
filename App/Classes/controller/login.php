@@ -21,11 +21,10 @@ class Login
         $password= $_POST['password'];
         $this->ModeLogin = new loginModel($username,$password);
         $datafetch = $this->ModeLogin->validateUser();
-        var_dump(   $datafetch );
         if($datafetch === 'NO USER FOUND')
         {
             $myView = new View(self::LOGIN_VIEW_NAME);
-            $myView->render(['data'=>'mail ou mot de passe incorect !']);
+            $myView->render(['data'=>'mail ou mot de passe incorect !','style'=>'login']);
             return;
         }
         else if($datafetch === true)
@@ -33,23 +32,18 @@ class Login
             $redirection =HOST.'home';
             SessionMng::init_php_session();
             SessionMng::addSessionData(['login'=>'on','test'=>'TU EST LOGER']);
-            echo $redirection;
-            echo "VALIDATE";
+           
              header('Location: '.$redirection);
              exit();
         }
         else if($datafetch === false)
         {
-            echo 'NO USER FOUND';
             $myView = new View(self::LOGIN_VIEW_NAME);
-             $myView->render(['data'=>'mail ou mot de passe incorect !']);
+             $myView->render(['data'=>'mail ou mot de passe incorect !','style'=>'login']);
             return;
         }
       
-        // header('Location: '.$redirection);
-        // exit();
-         //$myView = new View(self::LOGIN_VIEW_NAME);
-         //return $myView->render();
+
     }
     
      

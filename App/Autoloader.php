@@ -36,7 +36,6 @@ class MyAutoload
             if(file_exists(APP.$class))
             {
                 include_once($class);
-                // echo 'NONE AUTOLOAD => '.$class.'.php';
             }
             else
             {

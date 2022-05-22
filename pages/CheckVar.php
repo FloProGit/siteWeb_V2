@@ -7,7 +7,6 @@
 $dns = $_ENV['DATABASE_DNS'];
 $host = getenv('DATABASE_USER');
 $pass = getenv('DATABASE_PASSWORD');
-//var_dump($_ENV);
 
 try{
     $conn = new PDO($dns,$host,$pass);
@@ -28,7 +27,6 @@ foreach($databases as $database){
 catch(PDOException $pe)
         {
             $errorMsg = $pe->getMessage();
-            echo $errorMsg;
 
             if(str_contains($errorMsg,'Unknown database'))
             {
@@ -47,12 +45,6 @@ catch(PDOException $pe)
                 echo 'pass = '. $pass;
             }
         }     
-//phpinfo();
-// foreach($_SERVER as $key_name => $key_value) {
-
-// print $key_name . " = " . $key_value . "<br>";
-
-// }
 
 ?>
 </p>

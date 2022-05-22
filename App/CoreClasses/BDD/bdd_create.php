@@ -11,7 +11,6 @@ if(file_exists($path))
     include($path);
     if(file_exists('../vars/.env'))
     {
-        echo ' .ENV exist '.'../vars/.env';
         (new DotEnv('../vars/.env'))->load();
     }
 }
@@ -25,7 +24,6 @@ $password = $_GET['password'];
 
 if($password === $_ENV['DATABASE_PASSWORD'])
 {
-    echo 'DNS =>'. $_ENV['DATABASE_DNS'];
         $host = $_ENV['DATABASE_DNS'];
         $user = $_ENV['DATABASE_USER'];
         $password = $_ENV['DATABASE_PASSWORD'];

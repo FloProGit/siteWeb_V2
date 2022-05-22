@@ -23,13 +23,11 @@ class Home
     }
     public function showCheck():void
     {
-        //echo "tata";
         $myView = new View('CheckVar');
         $myView->render(['style'=>'CheckVar']);
     }
     public function showCreateBDD():void
     {
-        //echo "tata";
         $myView = new View('CreateBDDPage');
         $myView->render(['style'=>'CreateBDDPage']);
     }

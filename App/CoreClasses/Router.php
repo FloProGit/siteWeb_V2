@@ -34,9 +34,7 @@ class Router
         if($callback === false)
         {
                 $this->response->setStatusCode(404);
-            echo '<pre>';
-            var_dump($_SERVER);
-            echo '</pre>';
+  
 
             echo'NOT FOUND';
             exit;

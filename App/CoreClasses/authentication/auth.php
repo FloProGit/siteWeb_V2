@@ -14,10 +14,8 @@ class auth{
         }
         $result = $req->fetch(\PDO::FETCH_LAZY);
 
-        var_dump($result);
         if( $req->rowCount() === 0)
         {
-            var_dump($req->rowCount());
                 return 'NO USER FOUND';
         }
         else{

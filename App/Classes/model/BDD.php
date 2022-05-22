@@ -18,7 +18,7 @@ class BDD
 
     public function __construct()
     {
-        var_dump( $_ENV);
+        
         $dbname = 'test';
         $host = $_ENV['DATABASE_DNS'];
         $DBname ='dbname='.$_ENV['DATABASE_NAME'];
@@ -33,7 +33,6 @@ class BDD
         catch(\PDOException $pe)
         {
             $errorMsg = $pe->getMessage();
-            echo $errorMsg;
         }        
     }
 
