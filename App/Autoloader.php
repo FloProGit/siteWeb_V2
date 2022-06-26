@@ -18,6 +18,7 @@ class MyAutoload
         define('VIEW',ROOT .'pages/');
         define('MODEL',ROOT .'model/');
         define('CSS',HOST.'public/css/');
+        define('PROG',HOST.'Programs/');
         define('IMG',ROOT.'public/img/');
         define('CLASSES',ROOT.'classes/');
         define('APP',__DIR__.'/');

@@ -13,6 +13,7 @@ MyAutoload::start();
 $app = new Application();
 
 $app->router->get('/',[Home::class,'showHome']);
+$app->router->get('/Projet',[Home::class,'Show_Projet']);
 $app->router->get('/home',[Home::class,'showHome']);
 $app->router->get('/a_propos',[Home::class,'showA_Propos']);
 $app->router->get('/competence',[Home::class,'showCompetence']);

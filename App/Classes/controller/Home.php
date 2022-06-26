@@ -31,5 +31,10 @@ class Home
         $myView = new View('CreateBDDPage');
         $myView->render(['style'=>'CreateBDDPage']);
     }
+    public function Show_Projet():void
+    {
+        $myView = new View('Unity');
+        $myView->render(['style'=>'home']);
+    }
   
 }

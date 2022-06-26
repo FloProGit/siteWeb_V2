@@ -22,7 +22,7 @@ SessionMng::init_php_session();
         <nav class="main_menu_nav">
             <a href=<?= HOST."a_propos"?>>a propos</a>
             <a href=<?= HOST."competence"?>>competence</a>
-            <a href="projets">projets</a>
+            <a href=<?= HOST."Projet"?>>projets</a>
             <a href="contact">contact</a>
             <?php 
             if(!empty($_SESSION['login']))
